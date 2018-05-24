@@ -15,6 +15,8 @@ public class SegundaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
     }
+
+    //fazendo com que a segunda retorne a primeira apos morrer, e mande um texto
     public void enviarTexto(View view){
         EditText editText = (EditText) findViewById(R.id.editText);
         String texto = editText.getText().toString();
