@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private final int SEGUNDA = 1;
+    private final String TEXT_VISIBLE = "textVisible";
+    private final String TEXT_CONTENT = "textContent";
 
     private TextView mtextViewHello;
 
@@ -52,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState, outPersistentState);
 
         if(mtextViewHello.getVisibility()==View.VISIBLE){
-            
+            outState.putBoolean(TEXT_VISIBLE,true);
+            outState.putString(TEXT_CONTENT,mtextViewHello.getText().toString());
         }
 
     }
